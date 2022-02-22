@@ -1,0 +1,17 @@
+/* imposting varibales */
+@import "./variables.css";
+
+/* imposrting fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+/* Restting */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: var(--font-family);
+    background-color: var(--body-bg);
+    color: var(--txt-color);
+    font-weight: 400;
+}
