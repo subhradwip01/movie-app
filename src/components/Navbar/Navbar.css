@@ -1,0 +1,60 @@
+@import url("../../variables.css");
+
+nav {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 10px 40px;
+}
+
+/* Branding css */
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand img {
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+}
+.nav-brand p {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.nav-menu {
+  align-self: center;
+}
+
+/* Menu css */
+.nav-menu ul {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+}
+.nav-list {
+  list-style: none;
+  margin:0 20px;
+  padding-bottom: 5px;
+  transition: all 0.2s linear;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+}
+.nav-list::after,
+.nav-list .nav-list__link::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  transition: width 0.5s ease;
+  height: 2px;
+  background-color: var(--main-color);
+}
+.nav-list:hover::after,
+.nav-list .nav-list__link.selected::after{
+    width: 100%;
+}
