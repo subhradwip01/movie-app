@@ -13,7 +13,7 @@ const Navbar=() =>{
           "path":"movies"
       },
       {
-          "name":"TV Series",
+          "name":"TV",
           "path":"/tv"
       }
   ]
