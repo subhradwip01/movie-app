@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import play from "../../assets/play.png"
+import Brand from '../Brand/Brand'
 import "./Navbar.css"
 const Navbar=() =>{
   const navMenu=[
@@ -20,8 +20,7 @@ const Navbar=() =>{
   return (
    <nav>
        <div className='nav-brand'>
-           <img src={play} alt="logo"/>
-           <p>MovieVerse</p>
+           <Brand/>
        </div>
        <div className='nav-menu'>
            <ul>
