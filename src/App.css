@@ -20,3 +20,12 @@ a{
     color: var(--txt-color) ;   
     text-decoration: none;
 }
+.btn-outline{
+    border-radius: 20px;
+    background-color: var(--body-bg);
+    color: var(--txt-color);
+    padding: 15px 25px;
+    border: 1px solid var(--white) ;
+    font-size: 20px;
+    cursor: pointer;
+}
