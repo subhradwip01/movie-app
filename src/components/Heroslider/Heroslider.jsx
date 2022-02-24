@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {
-  useGetMoviesQuery,
+  useGetMoviesOrTvsQuery,
   movieType,
+  catlog as cat,
 } from "../../services/movie-api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay } from "swiper";
@@ -10,7 +11,9 @@ import SliderItem from "./SliderItem";
 
 const Heroslider = () => {
   const [movies, setMovies] = useState([]);
-  const { data, isFetching } = useGetMoviesQuery(movieType.popular);
+  const category = cat.movie;
+  const type = movieType.popular;
+  const { data, isFetching } = useGetMoviesOrTvsQuery({category,type});
 
   SwiperCore.use([Autoplay]);
   let moviesData = [];
@@ -42,7 +45,7 @@ const Heroslider = () => {
         // grabCursor={true}
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{delay: 3000}}
+        autoplay={{ delay: 3000 }}
       >
         {movies?.map(({ id, title, overview, backdrop_path, poster_path }) => (
           <SwiperSlide key={id}>
