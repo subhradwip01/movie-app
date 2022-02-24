@@ -1,9 +1,14 @@
 @import url("../../variables.css");
 
-nav {
+.navbar {
   display: grid;
   grid-template-columns: 3fr 2fr;
   padding: 10px 40px;
+  position: fixed;
+  z-index: 999;
+  background-color: transparent;
+  width: 100%;
+  transition: all 0.3s;
 }
 
 .nav-menu {
@@ -15,7 +20,7 @@ nav {
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 30px;
+  padding-right: 90px;
 }
 .nav-list {
   list-style: none;
@@ -41,4 +46,7 @@ nav {
 .nav-list:hover::after,
 .nav-list .nav-list__link.selected::after{
     width: 100%;
+}
+.black-nav{
+  background-color: black;
 }

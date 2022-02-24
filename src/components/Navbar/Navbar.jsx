@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import Brand from '../Brand/Brand'
 import "./Navbar.css"
 const Navbar=() =>{
+  const [blackNav, setBlackNav] = useState(false)
   const navMenu=[
       {
           "name":"Home",
@@ -17,8 +18,19 @@ const Navbar=() =>{
           "path":"/tv"
       }
   ]
+  
+  const navBackgroundChange=()=>{
+      if(window.scrollY>=36){
+          setBlackNav(true)
+      }
+      else{
+          setBlackNav(false)
+      }
+    }
+
+  window.addEventListener("scroll",navBackgroundChange)
   return (
-   <nav>
+   <nav className={blackNav?'navbar black-nav':'navbar'}>
        <div className='nav-brand'>
            <Brand/>
        </div>
