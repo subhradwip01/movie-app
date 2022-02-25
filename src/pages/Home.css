@@ -1,3 +1,7 @@
 .home-menu{
     margin: 3.2rem 2rem;
 }
+.home-menu__info{
+    display:grid;
+    grid-template-columns: 7fr 1fr;
+}

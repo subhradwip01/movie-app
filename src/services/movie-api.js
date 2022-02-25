@@ -27,12 +27,12 @@ export const movieApi=createApi({
     reducerPath:"movieApi",
     baseQuery: fetchBaseQuery({baseUrl:BASE_URL}),
     endpoints: (builder)=>({
-        getMoviesOrTvs: builder.query({
+        getShows: builder.query({
             query: ({category,type}) => `/${category}/${type}?api_key=${API_KEY}`
         }),
     })
 })
 
 export const {
-    useGetMoviesOrTvsQuery,
+    useGetShowsQuery,
 }=movieApi

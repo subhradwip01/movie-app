@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  useGetMoviesOrTvsQuery,
+  useGetShowsQuery,
   movieType,
   catlog as cat,
 } from "../../services/movie-api";
@@ -13,7 +13,7 @@ const Heroslider = () => {
   const [movies, setMovies] = useState([]);
   const category = cat.movie;
   const type = movieType.popular;
-  const { data, isFetching } = useGetMoviesOrTvsQuery({category,type});
+  const { data, isFetching } = useGetShowsQuery({category,type});
 
   SwiperCore.use([Autoplay]);
   let moviesData = [];
