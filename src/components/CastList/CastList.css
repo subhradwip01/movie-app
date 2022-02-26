@@ -1,0 +1,11 @@
+.casts{
+    text-align: center;
+}
+.casts .swiper-wrapper{
+    width:13%;
+}
+.cast-img img{
+   width: 200px;
+   height: 200px;
+   border-radius:100% ; 
+}
