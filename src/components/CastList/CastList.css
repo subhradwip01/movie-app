@@ -5,7 +5,15 @@
     width:13%;
 }
 .cast-img img{
-   width: 200px;
-   height: 200px;
+   width: 168px;
+   height: 180px;
    border-radius:100% ; 
+}
+.cast-name{
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.cast-film-name{
+    font-size: 15px;
 }

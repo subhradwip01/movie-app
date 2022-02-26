@@ -34,7 +34,7 @@ const CastList = ({ category, id }) => {
             srcset=""
           />
           </div>
-          <p className="cat-path">{c.name}</p>
+          <p className="cast-name">{c.name}</p>
           <p className="cast-film-name">{c.character ? `as ${c.character}`:""}</p>
         </div>
         </SwiperSlide>
