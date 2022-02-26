@@ -6,8 +6,8 @@ import MTCard from "../MTCard/MTCard";
 import "swiper/css";
 import "./FeatureList.css"
 
-const MovieTvList = ({ category, type }) => {
-  const { data, isfetching } = useGetShowsQuery({ category, type });
+const MovieTvList = ({ category, type ,id }) => {
+  const { data, isfetching } = useGetShowsQuery({ category, type,id });
   const [list, setList] = useState([]);
   useEffect(() => {
     const items = data?.results?.map((item) => ({
@@ -19,7 +19,7 @@ const MovieTvList = ({ category, type }) => {
     setList(items);
   }, [data]);
   SwiperCore.use([Autoplay]);
-  console.log(list);
+  console.log("list",list);
 
   if (isfetching) {
     return "Loading...";
