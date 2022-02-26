@@ -1,0 +1,8 @@
+.shows{
+    position: relative;
+    padding: 100px 30px;
+}
+.shows-heading{
+    text-align: center;
+    font-size: 2.5rem;
+}
