@@ -18,8 +18,8 @@ export const movieType={
     top_rated:"top_rated"
 }
 export const tvType={
-    latest:"latest",
     popular:"popular",
+    on_the_air:"on_the_air",
     top_rated:"top_rated"
 }
 
@@ -28,11 +28,19 @@ export const movieApi=createApi({
     baseQuery: fetchBaseQuery({baseUrl:BASE_URL}),
     endpoints: (builder)=>({
         getShows: builder.query({
-            query: ({category,type}) => `/${category}/${type}?api_key=${API_KEY}`
+            query: ({category,type,page,id}) => !id? `/${category}/${type}/?api_key=${API_KEY}&page=${page}` : `${category}/${id}/similar?api_key=${API_KEY}`
+        }),
+        getDetails:builder.query({
+            query: ({category,id})=>`/${category}/${id}?api_key=${API_KEY}`
+        }),
+        getCredits:builder.query({
+            query:({category,id})=>`${category}/${id}/credits?api_key=${API_KEY}`
         }),
     })
 })
 
 export const {
     useGetShowsQuery,
+    useGetDetailsQuery,
+    useGetCreditsQuery
 }=movieApi
