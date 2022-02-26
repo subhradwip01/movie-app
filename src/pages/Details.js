@@ -9,6 +9,7 @@ import {
 } from "../services/movie-api";
 import CastList from "../components/CastList/CastList";
 import FeatureList from "../components/FeatureList/FeatureList"
+import Iframe from "../components/Iframe/Iframe";
 import "./Details.css"
 const Details = () => {
   const { category, id } = useParams();
@@ -54,12 +55,17 @@ const Details = () => {
         </div>
         </div>
         <div className="show-cast">
-            <h2 className="show-cast__heading">Casts</h2>
+            <h2 className="show-__heading">Casts</h2>
             <CastList category={category} id={id}/>
         </div>
+        <div className="show-video">
+            <h2 className="show__heading">Internation Trailer</h2>
+            <Iframe category={category} id={id}/>
+        </div>
         <div className="show-similar">
-            <h1>Similar</h1>
+        <h2 className="show__heading">Similar</h2>
             <FeatureList category={category} id={id}/>
+            
         </div>
         </div>
       )}
