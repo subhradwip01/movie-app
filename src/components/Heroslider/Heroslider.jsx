@@ -5,8 +5,10 @@ import {
   catlog as cat,
 } from "../../services/movie-api";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay } from "swiper";
+import SwiperCore, { Navigation, Pagination } from "swiper";
 import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import SliderItem from "./SliderItem";
 
 const Heroslider = () => {
@@ -14,8 +16,8 @@ const Heroslider = () => {
   const category = cat.movie;
   const type = movieType.popular;
   const { data, isFetching } = useGetShowsQuery({category,type});
-
-  SwiperCore.use([Autoplay]);
+  SwiperCore.use([Navigation, Pagination]);
+  
   let moviesData = [];
 
   useEffect(() => {
@@ -36,16 +38,15 @@ const Heroslider = () => {
   if (isFetching) {
     return "Loading...";
   }
-
-  console.log(movies);
   return (
     <div>
       <Swiper
-        module={[Autoplay]}
-        // grabCursor={true}
+        module={[Navigation, Pagination]}
         spaceBetween={0}
         slidesPerView={1}
-        autoplay={{ delay: 3000 }}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
       >
         {movies?.map(({ id, title, overview, backdrop_path, poster_path }) => (
           <SwiperSlide key={id}>
