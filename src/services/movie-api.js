@@ -36,11 +36,15 @@ export const movieApi=createApi({
         getCredits:builder.query({
             query:({category,id})=>`${category}/${id}/credits?api_key=${API_KEY}`
         }),
+        getVideos:builder.query({
+            query:({category,id})=>`${category}/${id}/videos?api_key=${API_KEY}`
+        })
     })
 })
 
 export const {
     useGetShowsQuery,
     useGetDetailsQuery,
-    useGetCreditsQuery
+    useGetCreditsQuery,
+    useGetVideosQuery
 }=movieApi
