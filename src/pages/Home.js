@@ -12,7 +12,7 @@ const Home = () => {
       <div className='home-menu'>
       <div className='home-menu__info'>
         <h1 className="home-menu__heading">Upcominge movies</h1>
-        <Link to="/movies">
+        <Link to="/movie">
         <button className='btn-outline'>See more</button>
         </Link>
       </div>
@@ -23,7 +23,7 @@ const Home = () => {
       <div className='home-menu__info'>
         <h1 className="home-menu__heading">Top Rated movies</h1>
 
-        <Link to="/movies">
+        <Link to="/movie">
         <button className='btn-outline'>See more</button>
         </Link>
       </div>
@@ -33,7 +33,7 @@ const Home = () => {
       <div className='home-menu'>
       <div className='home-menu__info'>
         <h1 className="home-menu__heading">Top Rated TV</h1>
-        <Link to="/tvs">
+        <Link to="/tv">
         <button className='btn-outline'>See more</button>
         </Link>
       </div>
@@ -43,7 +43,7 @@ const Home = () => {
       <div className='home-menu'>
       <div className='home-menu__info'>
         <h1 className="home-menu__heading">Popular TV</h1>
-        <Link to="/tvs">
+        <Link to="/tv">
         <button className='btn-outline'>See more</button>
         </Link>
       </div>
