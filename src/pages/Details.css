@@ -26,9 +26,6 @@
 .show-poster{
     text-align: center;
 }
-.show-info{
-    width: 50%;
-}
 .show-poster-image{
     width: 500px;
     border-radius: 50px ;
@@ -37,13 +34,19 @@
     font-size: 5rem;
 }
 .genres{
-    margin:40px 0;
+    margin:20px 0;
+    padding-right: 30%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .genre-name{
     padding: 20px 50px;
     margin: 30px 20px;
     border: 2px solid white;
     border-radius: 30px;
+}
+.show-desc{
+    width: 50%;
 }
 .show-rating{
     margin: 20px 0;
