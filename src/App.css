@@ -21,11 +21,43 @@ a{
     text-decoration: none;
 }
 .btn-outline{
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     background-color: var(--body-bg);
     color: var(--txt-color);
     padding: 15px 25px;
     border: 1px solid var(--white) ;
     font-size: 20px;
     cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: all .2s linear;
 }
+.btn-outline:hover{
+    transform: scale(1.2);
+}
+.disable{
+    cursor: not-allowed;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: blue;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+  }
+
