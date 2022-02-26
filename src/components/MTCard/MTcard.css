@@ -10,6 +10,7 @@
   border-radius: var(--border-radius);
   position: relative;
 }
+
 .mt-card::before{
     content: "";
     position: absolute;
@@ -23,6 +24,7 @@
 }
 .mt-card__title{
     padding-top: 1.2rem;
+    text-align: center;
 }
 
 .mt-card__btn {
@@ -33,6 +35,8 @@
   transition: all 0.2s ease-in;
   background-color: #ff0000;
   box-shadow: rgb(255 0 0) -1px 0px 19px 0px;
+  border: none;
+  width: 100px;
 }
 
 .mt-card:hover .mt-card__btn{
