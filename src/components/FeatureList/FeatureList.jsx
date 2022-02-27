@@ -5,9 +5,9 @@ import SwiperCore, { Autoplay } from "swiper";
 import MTCard from "../MTCard/MTCard";
 import "swiper/css";
 import "./FeatureList.css"
-
+const DEFAUT_P=1
 const MovieTvList = ({ category, type ,id }) => {
-  const { data, isfetching } = useGetShowsQuery({ category, type,id });
+  const { data, isfetching } = useGetShowsQuery({ category, type,page:DEFAUT_P,id });
   const [list, setList] = useState([]);
   useEffect(() => {
     const items = data?.results?.map((item) => ({
