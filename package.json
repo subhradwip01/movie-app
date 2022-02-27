@@ -23,6 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://api.themoviedb.org/3",
   "eslintConfig": {
     "extends": [
       "react-app",
