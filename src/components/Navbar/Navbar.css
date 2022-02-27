@@ -1,18 +1,21 @@
 @import url("../../variables.css");
 
 .navbar {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
+  /* display: grid;
+  grid-template-columns: 3fr 2fr; */
+  display: flex;
   padding: 10px 40px;
   position: fixed;
   z-index: 999;
   background-color: transparent;
   width: 100%;
   transition: all 0.3s;
+  overflow: hidden;
 }
 
 .nav-menu {
   align-self: center;
+  width: 100%;
 }
 
 /* Menu css */
@@ -49,4 +52,40 @@
 }
 .black-nav{
   background-color: black;
+}
+
+.ham-menu{
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  position: fixed;
+  top:3%;
+  right: 6%;
+  cursor: pointer;
+}
+
+
+@media (max-width:600px){
+  .navbar{
+    flex-direction: column;
+    padding: 0;
+  }
+  .nav-brand{
+    padding: 20px;
+  }
+  .nav-menu{
+    display: none;
+    padding-top: 20px;
+    background-color: var(--black);
+  }
+  .nav-menu ul{
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 5px;
+  }
+  .nav-list{
+    margin-bottom: 10px;
+  }
+  
 }

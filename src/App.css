@@ -60,4 +60,26 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: var(--main-color);
   }
-
+  @media (max-width:650px){
+    .btn-outline{
+      width: 150px;
+      height: 50px;
+      font-size: 15px;
+    }
+  }
+  
+@media (max-width:460px){
+  .btn-outline{
+    width: 100px;
+    font-size: 15px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width:370px) {
+.btn-outline{
+  width:80px;
+  font-size: 13px;
+  padding: 4px 8px
+}
+  
+}

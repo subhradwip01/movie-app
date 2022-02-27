@@ -1,6 +1,28 @@
-.mt-list .swiper-wrapper{
+.mt-list .swiper-slide{
     width: 14%;
 }
 .mt-list{
     margin: 1.2rem;
+}
+
+@media (max-width:1300px){
+    .mt-list .swiper-slide{
+        width: calc(100vw - 85%)
+    }
+}
+
+@media (max-width:670px){
+    .mt-list .swiper-slide{
+        width: 43%;
+    }
+}
+@media (max-width:600px){
+    .mt-list .swiper-slide{
+        width: 50%;
+    }
+}
+@media (max-width:460px){
+    .mt-list .swiper-slide{
+        width: 80%;
+    }
 }

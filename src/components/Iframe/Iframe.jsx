@@ -26,7 +26,7 @@ export const Video=({vkey,vname})=>{
     const iref=useRef(null)
     useEffect(() => {
         const height = iref.current.offsetWidth * 9 / 16 + 'px';
-        iref.current.setAttribute('height', height);
+        //  iref.current.setAttribute('height', height);
     }, [])
     
     return (
@@ -35,7 +35,9 @@ export const Video=({vkey,vname})=>{
         <h2>{vname}</h2>
 
         </div>
-        <iframe ref={iref} src={`https://www.youtube.com/embed/${vkey}`} width="1080px"frameborder="0"></iframe>
+        
+           <iframe ref={iref} src={`https://www.youtube.com/embed/${vkey}`} frameborder="0"></iframe>
+        
     </div>
     )
 }

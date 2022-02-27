@@ -17,3 +17,64 @@
 .cast-film-name{
     font-size: 15px;
 }
+@media (max-width:1432px){
+    .casts .swiper-wrapper{
+        width: calc(100vw - 90%);
+    }
+}
+@media (max-width:1200px){
+    .casts .swiper-wrapper{
+        width: 18%;
+    }
+}
+@media (max-width:975px){
+    .casts .swiper-wrapper{
+        width: calc(100vw - 85%);
+    }
+}
+@media (max-width:834px){
+    .casts .swiper-wrapper{
+        width: 23%;
+    }
+}
+@media (max-width:786px){
+    .casts .swiper-wrapper{
+        width: 27%;
+    }
+}
+@media (max-width:666px){
+    .casts .swiper-wrapper{
+        width: calc(100vw - 78%);
+    }
+}
+@media (max-width:586px){
+    .casts .swiper-wrapper{
+        width: calc(100vw - 75%);
+    }
+}
+
+@media (max-width:510px){
+    .casts .swiper-wrapper{
+        width: calc(100vw - 75%);
+    }
+    .cast-img img{
+        width: 154px;
+        height: 160px;
+        border-radius:100% ; 
+     }
+}
+@media (max-width:470px){
+    .casts .swiper-wrapper{
+        width: 38%;
+    }
+    .cast-img img{
+        width: 146px;
+        height: 143px;
+        border-radius:100% ; 
+     }
+}
+@media (max-width:416px){
+    .casts .swiper-wrapper{
+        width: 42%;
+    }
+}
