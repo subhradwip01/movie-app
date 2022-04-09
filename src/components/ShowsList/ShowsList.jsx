@@ -14,11 +14,11 @@ const listReducer = (state, action) => {
     case "list":
       return {
         ...state,
-        list1: [...state.list1, ...action.payload],
+        list1: [...action.payload],
       };
 
     case "page":
-      let newP = state.page1 + 1;
+      let newP = state.page1 + action.payload;
       return {
         ...state,
         page1: newP,
@@ -35,7 +35,6 @@ const listReducer = (state, action) => {
 
 
 const ShowsList = ({ category }) => {
-  console.log("re")
   const [isLoading,setIsLoading] = useState(false)
   const [state, dispatch] = useReducer(listReducer, initialListState);
   const { data, isFetching } = useGetShowsQuery({
@@ -45,7 +44,6 @@ const ShowsList = ({ category }) => {
   });
 
   useEffect(() => {
-    console.log("inside eff");
     setIsLoading(true)
     let items = data?.results?.map((item) => ({
       id: item.id,
@@ -62,8 +60,8 @@ const ShowsList = ({ category }) => {
     return "Loading...";
   }
 
-  const loadMoreDataHandler = () => {
-    dispatch({ type: "page" });
+  const loadMoreDataHandler = (changedValue) => {
+    dispatch({ type: "page",payload:changedValue });
   };
 
   const types = [];
@@ -98,9 +96,14 @@ const ShowsList = ({ category }) => {
             />
           ))}
         </div>
-        <button onClick={loadMoreDataHandler} disabled={isLoading} className={isLoading ? 'btn-outline disable' : 'btn-outline'}>
-          {!isLoading?'Load More':"Loading..."}
+        <div style={{"display":"flex","justifyContent":"space-between"}}>
+        {state.page1 > 2 ? <button onClick={()=>loadMoreDataHandler(-1)} disabled={isLoading} className={isLoading ? 'btn-outline disable' : 'btn-outline'} style={{"margin-right":"5px"}}>
+          {!isLoading?'Prev Page':"Loading..."}
+        </button> : null}
+        <button onClick={()=>loadMoreDataHandler(1)} disabled={isLoading} className={isLoading ? 'btn-outline disable' : 'btn-outline'}>
+          {!isLoading?'Next Page':"Loading..."}
         </button>
+        </div>
       </div>
     </>
   );
