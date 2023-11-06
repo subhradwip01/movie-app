@@ -15,7 +15,7 @@ const Heroslider = () => {
   const [movies, setMovies] = useState([]);
   const category = cat.movie;
   const type = movieType.popular;
-  const { data, isFetching } = useGetShowsQuery({category,type});
+  const { data, isFetching } = useGetShowsQuery({category,type,page:1});
   SwiperCore.use([Navigation, Pagination]);
   
   let moviesData = [];
