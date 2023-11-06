@@ -27,16 +27,16 @@ export const movieApi=createApi({
     baseQuery: fetchBaseQuery({baseUrl:BASE_URL}),
     endpoints: (builder)=>({
         getShows: builder.query({
-            query: ({category,type,page,id}) => !id? `/${category}/${type}?api_key=${process.env.REACT_API_KEY}&page=${page}` : `${category}${id}/similar?api_key=${process.env.REACT_API_KEY}`
+            query: ({category,type,page,id}) => !id? `/${category}/${type}?api_key=${process.env.REACT_APP_API_KEY}&page=${page}` : `${category}${id}/similar?api_key=${process.env.REACT_APP_API_KEY}`
         }),
         getDetails:builder.query({
-            query: ({category,id})=>`/${category}/${id}?api_key=${process.env.REACT_API_KEY}`
+            query: ({category,id})=>`/${category}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
         }),
         getCredits:builder.query({
-            query:({category,id})=>`${category}/${id}/credits?api_key=${process.env.REACT_API_KEY}`
+            query:({category,id})=>`${category}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}`
         }),
         getVideos:builder.query({
-            query:({category,id})=>`${category}/${id}/videos?api_key=${process.env.REACT_API_KEY}`
+            query:({category,id})=>`${category}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}`
         })
     })
 })
